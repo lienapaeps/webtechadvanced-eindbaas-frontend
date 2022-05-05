@@ -1,0 +1,31 @@
+@use "../colors";
+
+.form {
+    background-color: colors.$dark;
+    color: colors.$primary;
+    border-radius: 6px;
+    padding: 1.2em;
+    margin: 1em 10%;
+}
+
+.form__row {
+    width: 100%;
+}
+
+h2, p {
+    color: colors.$offwhite;
+}
+
+input {
+    background-color: colors.$offwhite;
+    color: colors.$dark;
+    border: 1px solid colors.$dark;
+    border-radius: 3px;
+    line-height: 1.6em;
+    padding: .4em;
+    margin: .6em;
+}
+
+input::placeholder {
+    color: colors.$primary;
+}

@@ -5,14 +5,18 @@ import { ref } from 'vue'
 
 <template>
   <main>
-    <h1>Login to Jackpot</h1>
-    <div>
-      <label for=""></label>
-      <input type="text" id="username" name="username" placeholder="Username">
-      <input type="password" id="password" name="password" placeholder="Password">
-      <button type="submit">Login</button>
-    </div>
-    <div>
+    <h1>Welcome to Jackpot</h1>
+    <div class="form form--login">
+      <h2>Login</h2>
+      <div class="form__row">
+        <label for="">Username</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+      </div>
+      <div class="form__row">
+        <label for="">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password">
+      </div>
+      <button type="submit" class="button">Login</button>
       <p>
         Don't have an account yet? | <a href="#">Register</a>
       </p>
