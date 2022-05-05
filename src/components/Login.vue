@@ -9,11 +9,11 @@ import { ref } from 'vue'
     <div class="form form--login">
       <h2>Login</h2>
       <div class="form__row">
-        <label for="">Username</label>
+        <label for="username">Username</label>
         <input type="text" id="username" name="username" placeholder="Username">
       </div>
       <div class="form__row">
-        <label for="">Password</label>
+        <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Password">
       </div>
       <button type="submit" class="button">Login</button>

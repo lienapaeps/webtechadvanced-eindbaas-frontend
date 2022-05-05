@@ -2,10 +2,11 @@
 
 .button {
     background-color: colors.$primary;
-    color: colors.$dark;
+    color: colors.$offwhite;
+    font-size: 1em;
     border: 1px solid colors.$primary;
     border-radius: 6px;
     padding: .8em 1.6em;
-    margin: 1em .4em;
-    width: 80%;
+    margin: 1em 0;
+    width: 100%;
 }

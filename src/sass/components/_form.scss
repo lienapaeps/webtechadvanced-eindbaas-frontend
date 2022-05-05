@@ -2,14 +2,20 @@
 
 .form {
     background-color: colors.$dark;
-    color: colors.$primary;
+    color: colors.$offwhite;
     border-radius: 6px;
     padding: 1.2em;
     margin: 1em 10%;
 }
 
 .form__row {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form__row label {
+    margin-top: .4em;
 }
 
 h2, p {
@@ -20,12 +26,12 @@ input {
     background-color: colors.$offwhite;
     color: colors.$dark;
     border: 1px solid colors.$dark;
-    border-radius: 3px;
-    line-height: 1.6em;
-    padding: .4em;
-    margin: .6em;
+    border-radius: 6px;
+    line-height: 1.4em;
+    padding: .8em .6em;
+    margin: .6em 0;
 }
 
 input::placeholder {
-    color: colors.$primary;
+    color: colors.$dark;
 }
