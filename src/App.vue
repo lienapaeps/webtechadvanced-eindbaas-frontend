@@ -20,12 +20,12 @@ const routes = {
 
 //get hash from url
 let currentPath = ref(window.location.hash);
-console.log(currentPath + " is the current path");
+// console.log(currentPath + " is the current path");
 
 // computed properties are derived from other variables, this will return the name of a component 
 let currentView = computed(() => 
   routes[currentPath.value.slice(1) || '/'] || Home);
-console.log(currentView);
+// console.log(currentView);
 
 onMounted( () => {
   window.addEventListener('hashchange', () => {
@@ -36,26 +36,20 @@ onMounted( () => {
 </script>
 <template>
   <div id="app">
-    <a class="toHome" href="#/home"><img src="./assets/arrow-left.svg" alt="back"></a>
-    <a href="#/login" class="logout"><img src="./assets/logout.svg" alt="logout"></a>
+    <div class="nav nav--top">
+      <a class="top__link toHome" href="#/home"><img class="nav__icon" src="./assets/arrow-left.svg" alt="back"></a>
+      <a class="top__link logout" href="#/login"><img class="nav__icon" src="./assets/logout.svg" alt="logout"></a>
+    </div>
           <component :is="currentView" />
-    <div class="nav">
-      <a class="navlink " href="#/history"><img src="./assets/time-history.svg" alt="history"><span>History</span></a>
-      <a class="toSend" href="#/Send"><img src="./assets/send.svg" alt="send"></a>
-      <a class="navlink" href="#/leader"><img src="./assets/cup.svg" alt="cup"><span>Leaderboard</span></a>
+    <div class="nav nav--bottom">
+      <a class="nav__link " href="#/history"><img class="nav__icon" src="./assets/time-history.svg" alt="history"><span>History</span></a>
+      <a class="icon--send" href="#/send"><img src="./assets/send.svg" alt="send"></a>
+      <a class="nav__link" href="#/leader"><img class="nav__icon" src="./assets/cup.svg" alt="cup"><span>Leaderboard</span></a>
     </div>
 
   </div>
 </template>
 <style>
-/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"); */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -63,38 +57,5 @@ onMounted( () => {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.nav {
-  display: grid;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-items: space-around;
-  align-items: center;
-  border-top: 1px solid #2c3e50;
-  padding: 1em 1em;
-}
-
-.toSend {
-  width: 100%;
-  height: 100%;
-}
-
-.navlink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: .8em;
-  color: #2c3e50;
-  text-decoration: none;
-}
-
-.navlink img {
-  width: 32px;
-  height: 32px;
-  margin: 8px;
 }
 </style>
