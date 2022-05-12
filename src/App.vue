@@ -5,7 +5,19 @@ import Login from './components/Login.vue'
 </script>
 
 <template>
-  <Login />
+  <div id="app">
+      <Login />
+      <header>
+        <h1>Welcome to Vue!</h1>
+      </header>
+      <main>
+        <p>
+          This is a simple SFC template.</p>  
+      </main>
+      <nav>
+
+      </nav>
+  </div>
 </template>
 
 <style>
