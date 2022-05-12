@@ -8,12 +8,22 @@
     margin: .3em 0;
 }
 
-.card__leader {
+.card--leader {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: .8em 1em;
+    padding: .6em 1em;
+}
+
+.card--transfer {
+    display: grid;
+    grid-template-columns: 25% auto 10%;
+    grid-template-rows: 50% 50%;
+    column-gap: .2em;
+    padding: .6em 1em .6em .2em;
+    background-color: colors.$primary; 
+    color: colors.$dark;
 }
 
 .card__item {
@@ -21,7 +31,7 @@
     font-size: 1em;
 }
 
-.leader--rank {
+.leader__rank {
     background-color: colors.$offwhite;
     color: colors.$dark;
     border-radius: 500px;
@@ -29,6 +39,37 @@
     margin-right: .8em;
 }
 
-.leader--balance {
+.leader__balance {
     margin-right: 1em ;
+}
+
+.transfer__date {
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: start;
+    text-align: left;
+    font-size: .8em;
+    padding: .4em;
+    color: colors.$offwhite;
+
+}
+
+.transfer__sender {
+    grid-column: 2 / span 1;
+    align-self: start;
+    justify-self: start;
+}
+
+.transfer__amount {
+    grid-column: 3 / span 1;
+    align-self: start;
+    justify-self: end;
+}
+
+.transfer__message {
+    grid-column: 2 / span 1;
+    align-self: start;
+    justify-self: start;
+    text-align: left;
+    font-size: .8em;
 }
