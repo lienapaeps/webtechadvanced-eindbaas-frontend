@@ -1,0 +1,52 @@
+@use "../colors";
+
+.nav {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav--top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+  }
+
+  .top--link {
+      color: colors.$dark;
+  }
+
+  .nav--bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: space-around;
+    align-items: center;
+    bottom: 0;
+    border-top: 1px solid colors.$dark;
+    padding: .5em 1em;
+
+  }
+  
+  .icon--send {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .8em;
+    color: #2c3e50;
+    text-decoration: none;
+  }
+  
+  .nav__icon {
+    width: 32px;
+    height: 32px;
+    margin: 8px;
+  }
+  
