@@ -2,21 +2,16 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import Login from './components/Login.vue'
+import Register from './components/Register.vue'
 </script>
 
 <template>
   <div id="app">
-      <Login />
-      <header>
-        <h1>Welcome to Vue!</h1>
-      </header>
-      <main>
-        <p>
-          This is a simple SFC template.</p>  
-      </main>
-      <nav>
-
-      </nav>
+    <!-- <Login /> -->
+    <Register />
+    <main>
+      <p>This is a simple SFC template.</p>
+    </main>
   </div>
 </template>
 
