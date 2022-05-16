@@ -1,11 +1,15 @@
 @use "../colors";
 
 .form {
-    background-color: colors.$dark;
-    color: colors.$offwhite;
+    color: colors.$dark;
     border-radius: 6px;
     padding: 1.2em;
-    margin: 1em 10%;
+    margin: 2em 10%;
+}
+
+.form--login {
+    background-color: colors.$dark;
+    color: colors.$offwhite;
 }
 
 .form__row {
@@ -34,4 +38,11 @@ input {
 
 input::placeholder {
     color: colors.$dark;
+}
+
+@media (min-width: 1200px) {
+    .form {
+        max-width: 60%;
+        margin: 2em auto;
+    }
 }

@@ -38,7 +38,7 @@ onMounted( () => {
   <div id="app">
     <div class="nav nav--top">
       <a class="top__link toHome" href="#/home"><img class="nav__icon" src="./assets/arrow-left.svg" alt="back"></a>
-      <a class="top__link logout" href="#/login"><img class="nav__icon" src="./assets/logout.svg" alt="logout"></a>
+      <a class="top__link logout" href="/"><img class="nav__icon" src="./assets/logout.svg" alt="logout"></a>
     </div>
           <component :is="currentView" />
     <div class="nav nav--bottom">

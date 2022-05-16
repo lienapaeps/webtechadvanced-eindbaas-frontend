@@ -17,7 +17,7 @@
     padding: 0 5%;
   }
 
-  .main__leaders {
+  .main--leaders, .main--history {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -27,4 +27,11 @@
   header {
     font-size: .8em;
     padding-top: 10px;
+  }
+
+  .empty {
+    width: 100px;
+    height: auto;
+    opacity: 50%;
+    margin-top: 5%;
   }

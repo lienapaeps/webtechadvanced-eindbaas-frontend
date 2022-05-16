@@ -31,7 +31,7 @@
     font-size: 1em;
 }
 
-.leader__rank {
+.card__rank {
     background-color: colors.$offwhite;
     color: colors.$dark;
     border-radius: 500px;
@@ -39,11 +39,11 @@
     margin-right: .8em;
 }
 
-.leader__balance {
+.card__balance {
     margin-right: 1em ;
 }
 
-.transfer__date {
+.card__date {
     grid-row: 1 / span 2;
     align-self: center;
     justify-self: start;
@@ -54,19 +54,19 @@
 
 }
 
-.transfer__sender {
+.card__sender {
     grid-column: 2 / span 1;
     align-self: start;
     justify-self: start;
 }
 
-.transfer__amount {
+.card__amount {
     grid-column: 3 / span 1;
     align-self: start;
     justify-self: end;
 }
 
-.transfer__message {
+.card__message {
     grid-column: 2 / span 1;
     align-self: start;
     justify-self: start;
