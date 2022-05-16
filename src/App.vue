@@ -23,11 +23,11 @@ let currentPath = ref(window.location.hash);
 // console.log(currentPath + " is the current path");
 
 // computed properties are derived from other variables, this will return the name of a component 
-let currentView = computed(() => 
+let currentView = computed(() =>
   routes[currentPath.value.slice(1) || '/'] || Home);
 // console.log(currentView);
 
-onMounted( () => {
+onMounted(() => {
   window.addEventListener('hashchange', () => {
     currentPath.value = window.location.hash;
   })
@@ -36,17 +36,23 @@ onMounted( () => {
 </script>
 <template>
   <div id="app">
+    <!-- <Login /> -->
+    <Register />
+    <main>
+      <p>This is a simple SFC template.</p>
+    </main>
     <div class="nav nav--top">
       <a class="top__link toHome" href="#/home"><img class="nav__icon" src="./assets/arrow-left.svg" alt="back"></a>
       <a class="top__link logout" href="/"><img class="nav__icon" src="./assets/logout.svg" alt="logout"></a>
     </div>
-          <component :is="currentView" />
+    <component :is="currentView" />
     <div class="nav nav--bottom">
-      <a class="nav__link " href="#/history"><img class="nav__icon" src="./assets/time-history.svg" alt="history"><span>History</span></a>
+      <a class="nav__link " href="#/history"><img class="nav__icon" src="./assets/time-history.svg"
+          alt="history"><span>History</span></a>
       <a class="icon--send" href="#/send"><img src="./assets/send.svg" alt="send"></a>
-      <a class="nav__link" href="#/leader"><img class="nav__icon" src="./assets/cup.svg" alt="cup"><span>Leaderboard</span></a>
+      <a class="nav__link" href="#/leader"><img class="nav__icon" src="./assets/cup.svg"
+          alt="cup"><span>Leaderboard</span></a>
     </div>
-
   </div>
 </template>
 <style>
