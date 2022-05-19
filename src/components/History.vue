@@ -5,8 +5,8 @@ let transfers = ref([]);
 
 function addHistory() {
   fetch("http://localhost:3001/api/v1/transfers")
-  .then(response => response.json())
-  .then((data) => {
+    .then(response => response.json())
+    .then((data) => {
       console.log(data.data.transfers);
       transfers.value = data.data.transfers;
       transfers.value.filter(transfer => {
@@ -16,8 +16,8 @@ function addHistory() {
           document.querySelector(".card--transfer").style.backgroundColor = "#44A06F";
         }
       });
-  })
-  .catch(error => console.log(error));
+    })
+    .catch(error => console.log(error));
 }
 
 onMounted(() => {
@@ -28,7 +28,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <header><h1>History</h1></header>
+  <header>
+    <h1>History</h1>
+  </header>
   <main class="main--history">
     <div class="card card--transfer" v-for="t, index in transfers" v-bind:key="index">
       <div class="card__item transfer__date">{{ t.time }}</div>

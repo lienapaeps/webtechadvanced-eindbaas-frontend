@@ -4,7 +4,9 @@ import { ref } from 'vue'
 </script>
 
 <template>
-  <header>New Transaction</header>
+  <header>
+    <h1>New Transaction</h1>
+  </header>
   <main>
   </main>
 </template>
