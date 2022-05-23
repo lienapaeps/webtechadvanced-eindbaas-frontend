@@ -29,6 +29,16 @@ function register() {
                     let feedback = document.querySelector(".alert");
                     feedback.textContent = "Registration successful";
                     feedback.classList.remove("hidden");
+
+                    let token = json.data.token;
+                    localStorage.setItem("token", token);
+
+                    window.location.href = "#/home";
+                } else {
+                    let feedback = document.querySelector(".alert");
+                    feedback.textContent = "Registration failed";
+                    feedback.classList.remove("hidden");
+                    feedback.style.backgroundColor = "red";
                 }
             })
             .catch(error => console.log(error));

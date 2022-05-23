@@ -13,6 +13,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^2.0.6",
     "cors": "^2.8.5",
+    "jsonwebtoken": "^8.5.1",
+    "passport-jwt": "^4.0.0",
     "sass": "^1.51.0",
     "vue": "^3.2.25"
   },
