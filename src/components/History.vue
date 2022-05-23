@@ -4,7 +4,11 @@ import { ref, onMounted } from 'vue'
 let transfers = ref([]);
 
 function addHistory() {
-  fetch("http://localhost:3002/api/v1/transfers")
+  fetch("http://localhost:3002/api/v1/transfers", {
+    "headers": {
+      "Authorization": "Bearer " + localStorage.getItem("token")
+    }
+  })
     .then(response => response.json())
     .then((data) => {
       console.log(data.data.transfers);
@@ -17,7 +21,12 @@ function addHistory() {
         }
       });
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      console.log(error);
+      // redirecten naar log in
+      window.location.href = "/";
+      // token verwijderen
+    });
 }
 
 onMounted(() => {

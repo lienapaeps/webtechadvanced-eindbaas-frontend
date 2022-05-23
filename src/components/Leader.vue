@@ -4,7 +4,11 @@ import { ref, onMounted } from 'vue';
 let users = ref([]);
 
 function addLeader() {
-  fetch("http://localhost:3002/api/v1/users")
+  fetch("http://localhost:3002/api/v1/users", {
+    "headers": {
+      "Authorization": "Bearer " + localStorage.getItem("token")
+    }
+  })
     .then(response => response.json())
     .then((data) => {
       users.value = data.data.users;
@@ -12,7 +16,12 @@ function addLeader() {
         return b.balance - a.balance;
       });
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      console.log(error);
+      // redirecten naar log in
+      window.location.href = "/";
+      // token verwijderen
+    });
 }
 
 onMounted(() => {

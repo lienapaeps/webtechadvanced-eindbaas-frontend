@@ -9,7 +9,7 @@ function login() {
     let username = document.querySelector("#username").value;
     let password = document.querySelector("#password").value;
 
-    fetch("http://localhost:3002/api/v1/users/login", {
+    fetch("http://localhost:3002/api/v1/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

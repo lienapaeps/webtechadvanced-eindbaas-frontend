@@ -9,7 +9,7 @@ function register() {
         let username = document.querySelector("#username").value;
         let password = document.querySelector("#password").value;
 
-        fetch("http://localhost:3002/api/v1/users/register", {
+        fetch("http://localhost:3002/api/v1/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
