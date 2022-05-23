@@ -67,11 +67,7 @@ onMounted(() => {
       </div>
       <button class="button button--login">Log in</button>
       <p>
-<<<<<<< HEAD
         Don't have an account yet? | <a href="/register">Register</a>
-=======
-        Don't have an account yet? | <a href="#/register">Register</a>
->>>>>>> liena
       </p>
     </div>
   </main>

@@ -29,26 +29,26 @@ header {
   padding-top: 10px;
 }
 
-<<<<<<< HEAD
-  .main--leaders, .main--history {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
+.main--leaders,
+.main--history {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  header {
-    font-size: .8em;
-    padding-top: 10px;
-  }
+header {
+  font-size: .8em;
+  padding-top: 10px;
+}
 
-  .empty {
-    width: 100px;
-    height: auto;
-    opacity: 50%;
-    margin-top: 5%;
-  }
-=======
+.empty {
+  width: 100px;
+  height: auto;
+  opacity: 50%;
+  margin-top: 5%;
+}
+
 .balance__number {
   margin-top: .6em;
   color: black;
@@ -60,4 +60,3 @@ header {
   color: darkgray;
   font-weight: 400;
 }
->>>>>>> liena
