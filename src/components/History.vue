@@ -11,15 +11,15 @@ function addHistory() {
   })
     .then(response => response.json())
     .then((data) => {
-      console.log(data.data.transfers);
+      // console.log(data.data.transfers);
       transfers.value = data.data.transfers;
-      transfers.value.filter(transfer => {
-        if (transfer.amount <= 0) {
-          document.querySelector(".card--transfer").style.backgroundColor = "green";
-        } else {
-          document.querySelector(".card--transfer").style.backgroundColor = "#44A06F";
-        }
-      });
+      // transfers.value.filter(transfer => {
+      //   if (transfer.amount <= 0) {
+      //     document.querySelector(".card--transfer").style.backgroundColor = "green";
+      //   } else {
+      //     document.querySelector(".card--transfer").style.backgroundColor = "#44A06F";
+      //   }
+      // });
     })
     .catch(error => {
       console.log(error);
