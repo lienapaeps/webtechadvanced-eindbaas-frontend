@@ -1,7 +1,7 @@
 @use "../colors";
 
 .card {
-    width: 90%;
+    width: 100%;
     background-color: colors.$dark;
     color: colors.$offwhite;
     border-radius: 10px;
@@ -29,6 +29,14 @@
 .card__item {
     display: inline-block;
     font-size: 1em;
+}
+
+.recent--transfer .card__title {
+    margin: 1em 0;
+    color: darkgray;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.2em;
 }
 
 .leader__rank {
