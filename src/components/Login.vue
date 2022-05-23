@@ -16,9 +16,9 @@ import { ref } from 'vue'
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Password">
       </div>
-      <button type="submit" class="button">Login</button>
+      <button type="submit" class="button button--login">Login</button>
       <p>
-        Don't have an account yet? | <a href="#">Register</a>
+        Don't have an account yet? | <a href="#/register">Register</a>
       </p>
     </div>
   </main>
