@@ -1,7 +1,7 @@
 @use "../colors";
 
 .card {
-    width: 90%;
+    width: 100%;
     background-color: colors.$dark;
     color: colors.$offwhite;
     border-radius: 10px;
@@ -22,7 +22,7 @@
     grid-template-rows: 50% 50%;
     column-gap: .2em;
     padding: .6em 1em .6em .2em;
-    background-color: colors.$primary; 
+    background-color: colors.$primary;
     color: colors.$dark;
 }
 
@@ -31,7 +31,19 @@
     font-size: 1em;
 }
 
+<<<<<<< HEAD
 .card__rank {
+=======
+.recent--transfer .card__title {
+    margin: 1em 0;
+    color: darkgray;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.leader__rank {
+>>>>>>> liena
     background-color: colors.$offwhite;
     color: colors.$dark;
     border-radius: 500px;
@@ -39,8 +51,13 @@
     margin-right: .8em;
 }
 
+<<<<<<< HEAD
 .card__balance {
     margin-right: 1em ;
+=======
+.leader__balance {
+    margin-right: 1em;
+>>>>>>> liena
 }
 
 .card__date {
