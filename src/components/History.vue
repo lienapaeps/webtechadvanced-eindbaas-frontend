@@ -32,7 +32,7 @@ onMounted(() => {
 
 <template>
   <header><h1>History</h1></header>
-  <main class="main--history">
+  <main class="main main--history">
     <div class="card card--transfer" v-for="t, index in transfers" v-bind:key="index">
       <div class="card__item card__date">{{ t.time }}</div>
       <div class="card__item card__sender">{{ t.sender }}</div>
