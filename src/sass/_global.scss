@@ -1,37 +1,62 @@
 @use "./colors";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-  
-  body {
-    background-color: colors.$offwhite;
-  }
+body {
+  background-color: colors.$offwhite;
+}
 
-  main {
-    margin-top: 40px;
-    width: 100%;
-    height: auto;
-    padding: 0 5%;
-  }
+main {
+  margin-top: 40px;
+  width: 100%;
+  height: auto;
+  padding: 0 5%;
+}
 
-  .main--leaders, .main--history {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
+.main__leaders {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  header {
-    font-size: .8em;
-    padding-top: 10px;
-  }
+header {
+  font-size: .8em;
+  padding-top: 10px;
+}
 
-  .empty {
-    width: 100px;
-    height: auto;
-    opacity: 50%;
-    margin-top: 5%;
-  }
+.main--leaders,
+.main--history {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  font-size: .8em;
+  padding-top: 10px;
+}
+
+.empty {
+  width: 100px;
+  height: auto;
+  opacity: 50%;
+  margin-top: 5%;
+}
+
+.balance__number {
+  margin-top: .6em;
+  color: black;
+  font-size: 1.5em;
+}
+
+.balance__text {
+  margin-top: 1em;
+  color: darkgray;
+  font-weight: 400;
+}

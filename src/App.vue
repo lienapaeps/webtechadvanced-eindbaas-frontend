@@ -6,6 +6,7 @@ import Home from './components/Home.vue'
 import Leader from './components/Leader.vue'
 import Send from './components/Send.vue'
 import History from './components/History.vue'
+import Register from './components/Register.vue'
 
 import { ref, computed, onMounted } from 'vue'
 
@@ -15,7 +16,8 @@ const routes = {
   '/home': Home,
   '/leader': Leader,
   '/send': Send,
-  '/history': History
+  '/history': History,
+  '/register': Register
 }
 
 //get hash from url
@@ -37,7 +39,6 @@ onMounted(() => {
 <template>
   <div id="app">
     <!-- <Login /> -->
-    <Register />
     <main>
       <p>This is a simple SFC template.</p>
     </main>
