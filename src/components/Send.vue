@@ -10,8 +10,10 @@ function sendTransfer() {
     let amount = document.querySelector("#amount").value;
     let message = document.querySelector("#message").value;
 
-    let current = new Date();
-    let time = current.getDate();
+    let today = new Date();
+    let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let dateTime = date + ' ' + time;
 
 
     fetch("http://localhost:3002/api/v1/transfers/create", {
@@ -24,7 +26,7 @@ function sendTransfer() {
         "receiver": receiver,
         "amount": amount,
         "message": message,
-        "time": time
+        "time": dateTime
       })
     })
       .then(response => response.json())
@@ -33,7 +35,7 @@ function sendTransfer() {
           receiver: receiver,
           amount: amount,
           message: message,
-          time: time
+          time: dateTime
         };
         if (json.status === "Success") {
           let feedback = document.querySelector(".alert");
