@@ -25,7 +25,7 @@ function addHistory() {
       console.log(error);
       document.querySelector(".main--history").innerHTML = `<img class="empty" src="./src/assets/wallet.png" alt="Nothing here" />`;
       // redirecten naar log in
-      window.location.href = "/";
+      //window.location.href = "/";
       // token verwijderen
     });
 }
