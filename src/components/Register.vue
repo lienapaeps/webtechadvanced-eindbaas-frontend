@@ -67,7 +67,7 @@ onMounted(() => {
                 <label for="password">Password</label>
                 <input v-model="password" type="password" id="password" name="password" placeholder="Password">
             </div>
-            <button class="button button--register">Register</button>
+            <button class="button button--register">Log In</button>
             <p>
                 Already have an account? | <a href="#/">Log in</a>
             </p>

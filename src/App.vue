@@ -7,6 +7,7 @@ import Leader from './components/Leader.vue'
 import Send from './components/Send.vue'
 import History from './components/History.vue'
 import Register from './components/Register.vue'
+import Logout from './components/Logout.vue'
 
 import { ref, computed, onMounted } from 'vue'
 
@@ -17,7 +18,8 @@ const routes = {
   '/leader': Leader,
   '/send': Send,
   '/history': History,
-  '/register': Register
+  '/register': Register,
+  '/logout': Logout
 }
 
 //get hash from url
@@ -53,7 +55,7 @@ onMounted(() => {
     </main>
     <div class="nav nav--top">
       <a class="top__link toHome" href="#/home"><img class="nav__icon" src="./assets/arrow-left.svg" alt="back"></a>
-      <a class="top__link logout" href="/"><img class="nav__icon" src="./assets/logout.svg" alt="logout"></a>
+      <a class="top__link logout" href="#/logout"><img class="nav__icon" src="./assets/logout.svg" alt="logout"></a>
     </div>
     <component :is="currentView" />
     <div class="nav nav--bottom">
