@@ -16,7 +16,7 @@ function sendTransfer() {
     let dateTime = date + ' ' + time;
 
 
-    fetch("http://localhost:3002/api/v1/transfers/create", {
+    fetch("https://weareimd-jackpot.herokuapp.com/api/v1/transfers/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
