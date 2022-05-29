@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue'
 let transfer = ref({});
 
 function sendTransfer() {
-  let btnTransfer = document.querySelector(".button--transfer").addEventListener("click", function () {
+  document.querySelector(".button--transfer").addEventListener("click", function () {
     console.log("clicked");
     let receiver = document.querySelector("#receiver").value;
     let amount = document.querySelector("#amount").value;
