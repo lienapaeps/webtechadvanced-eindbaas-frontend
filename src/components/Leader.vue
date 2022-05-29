@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue';
 let users = ref([]);
 
 function addLeader() {
-  fetch("http://localhost:3002/api/v1/users", {
+  fetch("https://weareimd-jackpot.herokuapp.com/api/v1/users", {
     "headers": {
       "Authorization": "Bearer " + localStorage.getItem("token")
     }
