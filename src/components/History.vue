@@ -38,15 +38,10 @@ onMounted(() => {
 </script>
 
 <template>
-<<<<<<< HEAD
-  <header><h1>History</h1></header>
-  <main class="main main--history">
-=======
   <header>
     <h1>History</h1>
   </header>
   <main class="main--history">
->>>>>>> b354c10cf148381608aab4973cfb45328e52976b
     <div class="card card--transfer" v-for="t, index in transfers" v-bind:key="index">
       <div class="card__item card__date">{{ t.time }}</div>
       <div class="card__item card__sender">{{ t.sender }}</div>

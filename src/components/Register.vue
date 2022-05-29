@@ -3,8 +3,6 @@ import { ref, onMounted } from 'vue'
 
 let user = ref({});
 
-<<<<<<< HEAD
-=======
 function register() {
     let btnRegister = document.querySelector(".button--register").addEventListener("click", function () {
         console.log("clicked");
@@ -53,7 +51,6 @@ onMounted(() => {
 
 </script>
 
->>>>>>> b354c10cf148381608aab4973cfb45328e52976b
 <template>
     <main>
         <h1>Welcome to Jackpot</h1>
@@ -81,8 +78,6 @@ onMounted(() => {
 <style scoped>
 a {
     color: #42b983;
-<<<<<<< HEAD
-=======
 }
 
 .hidden {
@@ -95,6 +90,5 @@ a {
     padding: 0.5em;
     margin-bottom: .5em;
     color: #32549d;
->>>>>>> b354c10cf148381608aab4973cfb45328e52976b
 }
 </style>
