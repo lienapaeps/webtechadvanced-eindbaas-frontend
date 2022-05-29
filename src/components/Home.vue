@@ -68,7 +68,7 @@ onMounted(() => {
     </div>
     <div class="balance">
       <h2 class="balance__text">Current balance</h2>
-      <h3 class="balance__number">{{ users.balance }}</h3>
+      <h3 class="balance__number">£ 100</h3>
     </div>
     <div class="recent--transfer">
       <h2 class="card__title">Recent transactions</h2>
