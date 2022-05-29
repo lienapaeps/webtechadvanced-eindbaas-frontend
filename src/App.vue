@@ -17,7 +17,7 @@ const routes = {
   '/leader': Leader,
   '/send': Send,
   '/history': History,
-  '/register': Register
+  '/#/register': Register
 }
 
 //get hash from url
