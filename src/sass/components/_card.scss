@@ -31,8 +31,6 @@
     font-size: 1em;
 }
 
-.card__rank {}
-
 .recent--transfer .card__title {
     margin: 1em 0;
     color: darkgray;
@@ -41,7 +39,7 @@
     font-size: 1.2em;
 }
 
-.leader__rank {
+.card__rank {
     background-color: colors.$offwhite;
     color: colors.$dark;
     border-radius: 500px;
