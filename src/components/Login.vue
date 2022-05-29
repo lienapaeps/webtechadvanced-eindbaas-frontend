@@ -67,7 +67,7 @@ onMounted(() => {
       </div>
       <button class="button button--login">Log in</button>
       <p>
-        Don't have an account yet? | <a href="/register">Register</a>
+        Don't have an account yet? | <a href="/#/register">Register</a>
       </p>
     </div>
   </main>
