@@ -2,6 +2,8 @@
 import { ref, onMounted } from 'vue'
 
 let transfers = ref([]);
+let users = ref([]);
+
 
 function recentHistory() {
   fetch("http://localhost:3002/api/v1/transfers", {
@@ -30,8 +32,29 @@ function recentHistory() {
     });
 }
 
+function getBalance() {
+  fetch("https://weareimd-jackpot.herokuapp.com/api/v1/users", {
+    "headers": {
+      "Authorization": "Bearer " + localStorage.getItem("token")
+    }
+  })
+    .then(response => response.json())
+    .then((data) => {
+      users.value = data.data.users;
+    })
+    .catch(error => {
+      console.log(error);
+      document.querySelector(".balance__number").innerHTML = `<img class="empty" src="./src/assets/wallet.png" alt="Nothing here" />`;
+
+      // redirecten naar log in
+      window.location.href = "/";
+      // token verwijderen
+    });
+}
+
 onMounted(() => {
   recentHistory();
+  getBalance();
 });
 </script>
 
@@ -43,9 +66,9 @@ onMounted(() => {
     <div class="coin">
       <img class="coin__img" src="../assets/Vector.svg" alt="Coin">
     </div>
-    <div class="balance">
+    <div class="balance" v-for="user, index in users" v-bind:key="index">
       <h2 class="balance__text">Current balance</h2>
-      <h3 class="balance__number">£125</h3>
+      <h3 class="balance__number">{{ user.balance }}</h3>
     </div>
     <div class="recent--transfer">
       <h2 class="card__title">Recent transactions</h2>

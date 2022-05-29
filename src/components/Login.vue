@@ -30,6 +30,7 @@ function login() {
           localStorage.setItem("token", token);
 
           window.location.href = "#/home";
+          
         } else {
           let feedback = document.querySelector(".alert");
           feedback.textContent = "Log in failed";
