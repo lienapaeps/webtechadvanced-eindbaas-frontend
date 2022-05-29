@@ -53,7 +53,7 @@ function sendTransfer() {
       .catch(error => {
         console.log(error);
         // redirecten naar log in
-        window.location.href = "/";
+       // window.location.href = "/";
         // token verwijderen
       });
   });
